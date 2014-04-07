@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Converting videos"
+
 # Script to convert all video files from a directory (parameter) into mp4 format file
 
 # Sanity checks ?
