@@ -23,7 +23,7 @@ while read videofile
 do
 	lengthname=${#videofile}
 	namefile=${videofile:0:$lengthname-4}
-	mencoder "$videofile" -o "$namefile".mpeg -oac mp3lame -ovc lavc -lavcopts vcodec=mpeg1video -of mpeg
+	mencoder "$videofile" -o "$namefile".mp4 -oac mp3lame -ovc lavc -of lavf
 
 done < listoffiles
 rm listoffiles
