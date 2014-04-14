@@ -13,6 +13,18 @@ elif ! [[ -d $1 ]]
 then 
 echo "Parameter must be a folder. Check it please."
 	exit 2
+elif ! [[ -r $1 ]] 
+then 
+echo "You don't have the right to read it"
+	exit 3
+elif ! [[ -w $1 ]] 
+then 
+echo "You don't have the right to write on it"
+	exit 4
+hash mencoder 2>/dev/null
+if [[ $? !=0 ]]
+echo "Mencoder is not installed in your computer"
+	exit 5
 fi 
 # Main code
 
